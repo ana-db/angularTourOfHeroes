@@ -1,0 +1,12 @@
+<!-- IF: para evitar que cuando entramos en la app se rompa porque todavía no tenemos un héroe seleccionado -->
+<div *ngIf="hero"> 
+    <h2>{{selectedHero.name | uppercase}} Details</h2>
+    <div>
+        <span>id: </span>{{hero.id}}
+    </div>
+    <div>
+    <label>name:
+        <input [(ngModel)]="hero.name" placeholder="name"/>
+    </label>
+    </div>
+</div>
