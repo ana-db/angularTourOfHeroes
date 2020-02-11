@@ -25,7 +25,7 @@ export class HeroesComponent implements OnInit {
   selectedHero: Hero;
 
 
-  constructor(private heroService: HeroService){//, private messageService: MessageService) { // +++++++++++++
+  constructor(private heroService: HeroService, private messageService: MessageService) { // +++++++++++++
     console.trace('HeroesComponent constructor');
 
     //incializamos:
@@ -45,7 +45,7 @@ export class HeroesComponent implements OnInit {
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
-//    this.messageService.add(`HeroService: Selected hero id=${hero.id}`);  +++++++++++++++++++++
+    this.messageService.add(`HeroService: Selected hero id=${hero.id}`);   // +++++++++++++
   } //fin onSelect
 
 
