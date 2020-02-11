@@ -22,10 +22,10 @@ export class HeroesComponent implements OnInit {
   */
 
   heroes: Hero[]; //heroes = HEROES; //lo sustituimos porque lo llamamos desde el servicio
-  selectedHero: Hero;
+  //selectedHero: Hero; //código muerto en el paso 5, lo quitamos
 
 
-  constructor(private heroService: HeroService, private messageService: MessageService) { // +++++++++++++
+  constructor(private heroService: HeroService ) { //, private messageService: MessageService) { // +++++++++++++ //código muerto en el paso 5, lo quitamos
     console.trace('HeroesComponent constructor');
 
     //incializamos:
@@ -42,11 +42,13 @@ export class HeroesComponent implements OnInit {
     this.getHeroes();
   } //fin ngOnInit
 
-
+  /*
+  //código muerto en el paso 5, lo quitamos
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
     this.messageService.add(`HeroService: Selected hero id=${hero.id}`);   // +++++++++++++
   } //fin onSelect
+  */
 
 
   //función para recuperar los héroes del servicio:
